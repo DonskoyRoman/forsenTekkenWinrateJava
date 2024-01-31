@@ -5,7 +5,6 @@ public class Main {
 
     public static double calculateWinRate(int wins, int losses) {
         if (wins + losses == 0) {
-            // To avoid division by zero if there are no games played
             return 0.0;
         } else {
             return (double) wins / (wins + losses) * 100.0;
@@ -18,27 +17,27 @@ public class Main {
         int wins;
         int losses;
 
-        // Запрос количества побед
-        System.out.println("Enter the number of wins:");
+
+        System.out.println("Enter the number of paid actors:");
         while (true) {
             if (scanner.hasNextInt()) {
                 wins = scanner.nextInt();
                 break;
             } else {
                 System.out.println("Invalid input. Please enter a valid integer.");
-                scanner.nextLine(); // Очистка буфера ввода
+                scanner.nextLine();
             }
         }
 
-        // Запрос количества поражений
-        System.out.println("Enter the number of losses:");
+
+        System.out.println("Enter the number of chokes:");
         while (true) {
             if (scanner.hasNextInt()) {
                 losses = scanner.nextInt();
                 break;
             } else {
                 System.out.println("Invalid input. Please enter a valid integer.");
-                scanner.nextLine(); // Очистка буфера ввода
+                scanner.nextLine();
             }
         }
 
@@ -75,8 +74,8 @@ public class Main {
         } while (input != 'q');
 
 
-        System.out.println("Total Wins: " + wins);
-        System.out.println("Total Losses: " + losses);
+        //System.out.println("Total Wins: " + wins);
+        //System.out.println("Total Losses: " + losses);
 
 
         scanner.close();
